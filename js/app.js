@@ -1,7 +1,10 @@
+let alugueis=0;
 function alterarStatus(gameId){
     const jogo=document.getElementById(`game-${gameId}`);
     const botao = jogo.querySelector('a.dashboard__item__button');
     if (botao.textContent === "Alugar") { 
+        alugueis++;
+        console.log(`Número de jogos alugados: ${alugueis}`);
         botao.textContent = "Devolver"; 
         botao.classList.add('dashboard__item__button--return');
         jogo.querySelector('.dashboard__item__img').classList.add('dashboard__item__img--rented'); 
